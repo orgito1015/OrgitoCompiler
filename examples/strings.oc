@@ -1,0 +1,18 @@
+// Strings: char* string literals are first-class values now (assignable,
+// passable, printable directly), plus the strlen/strcmp/strcpy builtins.
+
+int main() {
+    char *greeting = "hello";
+    print(greeting);
+    print(strlen(greeting));
+
+    print(strcmp("abc", "abc"));
+    print(strcmp("abc", "abd"));
+
+    char buf[16];
+    strcpy(buf, "orgito");
+    print(buf);
+    print(strlen(buf));
+
+    return 0;
+}

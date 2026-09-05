@@ -1,0 +1,19 @@
+// A first OrgitoCompiler program: every .oc file runs starting at
+// int main(), and print(...) is a normal (built-in) function call.
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    print("hello from OrgitoCompiler");
+
+    int sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    print(sum);
+
+    print(add(2, 3));
+    return 0;
+}

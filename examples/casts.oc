@@ -1,0 +1,22 @@
+// Explicit casts among numeric types and pointers.
+
+int main() {
+    double d = 3.9;
+    int i = (int)d;
+    print(i);
+
+    int x = 7;
+    double dx = (double)x / 2.0;
+    print(dx);
+
+    char c = (char)65;
+    print(c);
+
+    long l = (long)1000000;
+    print(l);
+
+    int *p = (int *)0;
+    print(p == NULL);
+
+    return 0;
+}

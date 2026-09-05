@@ -1,0 +1,9 @@
+// Helper functions included by include_main.oc.
+
+int square(int x) {
+    return x * x;
+}
+
+int cube(int x) {
+    return x * x * x;
+}

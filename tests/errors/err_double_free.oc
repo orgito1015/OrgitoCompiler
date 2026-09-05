@@ -1,0 +1,8 @@
+// Compiles fine (it's type-correct); must fail at *runtime* with a fatal
+// VM error instead of corrupting the heap silently.
+int main() {
+    int *p = malloc(sizeof(int));
+    free(p);
+    free(p);
+    return 0;
+}

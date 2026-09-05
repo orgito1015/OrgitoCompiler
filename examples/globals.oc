@@ -1,0 +1,17 @@
+// Global variables with constant initializers, shared across functions.
+
+int counter = 100;
+double pi_approx = 3.14;
+
+int increment() {
+    counter = counter + 1;
+    return counter;
+}
+
+int main() {
+    print(counter);
+    print(increment());
+    print(increment());
+    print(pi_approx);
+    return 0;
+}

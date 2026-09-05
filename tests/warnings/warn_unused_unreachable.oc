@@ -1,0 +1,12 @@
+// Must compile and run successfully (exit 0) but report both an unused
+// variable and unreachable code following a return.
+int helper() {
+    int unused_var = 5;
+    return 1;
+    print("never runs");
+}
+
+int main() {
+    print(helper());
+    return 0;
+}

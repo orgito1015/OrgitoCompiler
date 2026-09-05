@@ -1,0 +1,5 @@
+// Must be rejected: assigning a char* to an int.
+int main() {
+    int x = "hello";
+    return 0;
+}

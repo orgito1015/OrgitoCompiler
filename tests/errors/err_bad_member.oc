@@ -1,0 +1,12 @@
+// Must be rejected: accessing a struct field that doesn't exist.
+struct Point {
+    int x;
+    int y;
+};
+
+int main() {
+    struct Point p;
+    p.x = 1;
+    print(p.z);
+    return 0;
+}

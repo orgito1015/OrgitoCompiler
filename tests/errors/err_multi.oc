@@ -1,0 +1,20 @@
+// Must be rejected with THREE independent, unrelated diagnostics in one
+// run: an undeclared identifier, an unknown struct member, and a wrong
+// argument count - proving the type checker collects multiple errors
+// instead of stopping at the first one.
+struct Point {
+    int x;
+    int y;
+};
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x = y;
+    struct Point p;
+    print(p.z);
+    print(add(1, 2, 3));
+    return 0;
+}

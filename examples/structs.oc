@@ -1,0 +1,36 @@
+// Structs: declaration, member access, pass/return by value with real
+// copy semantics (mutating a copy never touches the original).
+
+struct Point {
+    int x;
+    int y;
+};
+
+int sum_point(struct Point p) {
+    return p.x + p.y;
+}
+
+struct Point make_point(int x, int y) {
+    struct Point p;
+    p.x = x;
+    p.y = y;
+    return p;
+}
+
+int main() {
+    struct Point a;
+    a.x = 3;
+    a.y = 4;
+    print(sum_point(a));
+
+    struct Point b = make_point(10, 20);
+    print(b.x);
+    print(b.y);
+
+    struct Point c = a;
+    c.x = 999;
+    print(a.x);
+    print(c.x);
+
+    return 0;
+}

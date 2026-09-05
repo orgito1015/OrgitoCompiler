@@ -1,0 +1,36 @@
+// switch/case/default, including real C fallthrough semantics and break.
+
+int classify(int x) {
+    switch (x) {
+        case 1:
+        case 2:
+            return 10;
+        case 3:
+            return 20;
+        default:
+            return -1;
+    }
+}
+
+int main() {
+    print(classify(1));
+    print(classify(2));
+    print(classify(3));
+    print(classify(42));
+
+    int count = 0;
+    switch (2) {
+        case 1:
+            count += 1;
+        case 2:
+            count += 10;
+        case 3:
+            count += 100;
+            break;
+        case 4:
+            count += 1000;
+    }
+    print(count);
+
+    return 0;
+}

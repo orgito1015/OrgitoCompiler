@@ -1,0 +1,9 @@
+// Multi-file programs via a simple textual #include preprocessor.
+
+#include "include_lib.oc"
+
+int main() {
+    print(square(5));
+    print(cube(3));
+    return 0;
+}

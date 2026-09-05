@@ -1,0 +1,19 @@
+// Heap allocation: malloc/free backing an int array and a small string
+// buffer.
+
+int main() {
+    int *arr = malloc(sizeof(int) * 5);
+    for (int i = 0; i < 5; i++) arr[i] = i * 10;
+
+    int total = 0;
+    for (int i = 0; i < 5; i++) total += arr[i];
+    print(total);
+    free(arr);
+
+    char *s = malloc(6);
+    strcpy(s, "hello");
+    print(s);
+    free(s);
+
+    return 0;
+}

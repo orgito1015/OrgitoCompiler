@@ -1,0 +1,5 @@
+// Must be rejected: the assignment target is not an lvalue.
+int main() {
+    3 = 5;
+    return 0;
+}

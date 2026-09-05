@@ -1,0 +1,40 @@
+// Pointers: address-of, dereference, pointer arithmetic, struct pointers
+// via ->, and comparisons against NULL.
+
+struct Point {
+    int x;
+    int y;
+};
+
+void bump(struct Point *p) {
+    p->x = p->x + 100;
+}
+
+int main() {
+    int x = 42;
+    int *p = &x;
+    print(*p);
+    *p = 100;
+    print(x);
+
+    struct Point a;
+    a.x = 1;
+    a.y = 2;
+    bump(&a);
+    print(a.x);
+
+    int arr[3];
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    int *cursor = arr;
+    print(*(cursor + 1));
+    cursor = cursor + 2;
+    print(*cursor);
+
+    int *n = NULL;
+    print(n == NULL);
+    print(&x == &x);
+
+    return 0;
+}
