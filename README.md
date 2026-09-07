@@ -1,4 +1,6 @@
 # OrgitoCompiler
+![Orgito Compiler](Orgito-Compiler.png)
+
 
 **OrgitoCompiler** is a from-scratch C-subset compiler and stack-based
 virtual machine, implemented in C11.
